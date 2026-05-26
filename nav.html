@@ -1,0 +1,76 @@
+<!--
+  ============================================================================
+  BARRA DE NAVEGACIÓN COMÚN · Proyecto HSK Repaso
+  ============================================================================
+
+  CÓMO AÑADIR UN NIVEL NUEVO (por ejemplo, HSK 4):
+
+    1. Crea el archivo del nivel (p. ej. «hsk4.html») copiando la plantilla
+       de un nivel existente (hsk2.html o index.html) y sustituye su contenido.
+    2. Añade aquí abajo, dentro de <ul class="nav-list">, un <li> nuevo en el
+       orden que prefieras:
+            <li><a href="hsk4.html">HSK 4</a></li>
+    3. ¡Listo! No hay que tocar nada más: «nav-loader.js» inyecta este menú en
+       TODAS las páginas y marca solo el enlace de la página actual («.activo»).
+
+  NOTA: el enlace activo se calcula automáticamente en nav-loader.js según el
+  nombre del archivo abierto, así que NO hace falta marcarlo a mano aquí.
+  ============================================================================
+-->
+<style>
+  .main-nav{
+    background:var(--paper-2,#F3EBDC);
+    border-bottom:1px solid var(--line,#E3D8C4);
+    box-shadow:0 1px 0 rgba(0,0,0,.02);
+  }
+  .main-nav .nav-list{
+    list-style:none;
+    margin:0 auto;
+    padding:10px 22px;
+    max-width:1080px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:8px 10px;
+  }
+  .main-nav .nav-list > li{margin:0;}
+  .main-nav .nav-list a{
+    display:inline-block;
+    font-family:"Fraunces",Georgia,serif;
+    font-weight:600;
+    font-size:.82rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink-soft,#6A6055);
+    padding:7px 16px;
+    border:1px solid transparent;
+    border-radius:999px;
+    transition:color .15s, background .15s, border-color .15s;
+  }
+  .main-nav .nav-list a:hover{
+    color:var(--cinnabar,#B23A2E);
+    border-color:var(--line,#E3D8C4);
+    background:#fff;
+  }
+  .main-nav .nav-list a.activo{
+    color:#fff;
+    background:var(--cinnabar,#B23A2E);
+    border-color:var(--cinnabar,#B23A2E);
+    box-shadow:2px 2px 0 var(--cinnabar-deep,#8C2A20);
+  }
+  .main-nav .nav-list a.activo:hover{
+    color:#fff;
+    background:var(--cinnabar,#B23A2E);
+  }
+  @media print{ .main-nav{display:none;} }
+</style>
+
+<nav class="main-nav" aria-label="Niveles HSK">
+  <ul class="nav-list">
+    <li><a href="hsk2.html">HSK 2</a></li>
+    <li><a href="index.html">HSK 3</a></li>
+    <!-- Próximos niveles: añade aquí, p. ej. <li><a href="hsk4.html">HSK 4</a></li> -->
+  </ul>
+</nav>

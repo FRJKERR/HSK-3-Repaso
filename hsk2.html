@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Repaso · Gramática HSK 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF6EE;
+    --paper-2:#F3EBDC;
+    --paper-3:#EDE3D0;
+    --ink:#2B2521;
+    --ink-soft:#6A6055;
+    --cinnabar:#B23A2E;
+    --cinnabar-deep:#8C2A20;
+    --gold:#A6792F;
+    --line:#E3D8C4;
+    --line-soft:#EBE2D2;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Spectral",Georgia,serif;
+    font-size:16px;
+    line-height:1.6;
+    background-image:radial-gradient(var(--line-soft) 0.5px, transparent 0.5px);
+    background-size:22px 22px;
+  }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 26px 90px;
+  }
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    text-align:center;
+    padding:64px 20px 44px;
+    border-bottom:2px solid var(--ink);
+    margin-bottom:14px;
+  }
+  .hero .stamp{
+    display:inline-block;
+    font-family:"Noto Serif SC",serif;
+    font-size:1.5rem;
+    color:#fff;
+    background:var(--cinnabar);
+    width:64px;height:64px;line-height:64px;
+    border-radius:8px;
+    letter-spacing:2px;
+    box-shadow:3px 3px 0 var(--cinnabar-deep);
+    margin-bottom:22px;
+  }
+  .hero .kicker{
+    font-family:"Spectral",serif;
+    letter-spacing:.35em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    color:var(--gold);
+    margin:0 0 10px;
+    font-weight:600;
+  }
+  .hero h1{
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    font-size:clamp(2.2rem,5vw,3.4rem);
+    line-height:1.04;
+    margin:0 0 8px;
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--cinnabar);
+  }
+  .hero .sub{
+    font-family:"Noto Serif SC",serif;
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    letter-spacing:.12em;
+    margin-top:4px;
+  }
+
+  /* ---------- INTRO / LEGEND ---------- */
+  .intro{
+    max-width:760px;
+    margin:38px auto 30px;
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 18px;
+    justify-content:center;
+    max-width:820px;
+    margin:0 auto 50px;
+    padding:18px 22px;
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-radius:10px;
+    font-size:.86rem;
+  }
+  .legend b{
+    font-family:"Noto Serif SC",serif;
+    color:var(--cinnabar-deep);
+  }
+  .legend .abbr{
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .legend .abbr code{
+    font-family:"Fraunces",serif;
+    font-style:italic;
+    font-weight:600;
+    color:var(--cinnabar-deep);
+    background:none;
+  }
+
+  /* ---------- TOC ---------- */
+  nav.toc{
+    margin:0 auto 64px;
+    padding:30px 34px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    box-shadow:0 14px 30px -22px rgba(60,40,20,.4);
+  }
+  nav.toc h2{
+    font-family:"Fraunces",serif;
+    font-size:1.05rem;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    margin:0 0 18px;
+    color:var(--ink);
+    display:flex;align-items:center;gap:10px;
+  }
+  nav.toc h2::before{content:"";width:26px;height:2px;background:var(--cinnabar);}
+  .toc-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px 34px;
+  }
+  .toc-col h3{
+    font-family:"Fraunces",serif;
+    font-size:.92rem;
+    color:var(--cinnabar-deep);
+    margin:0 0 8px;
+    padding-bottom:6px;
+    border-bottom:1px dashed var(--line);
+  }
+  .toc-col ul{list-style:none;margin:0;padding:0;}
+  .toc-col li{margin:0 0 4px;}
+  .toc-col a{
+    color:var(--ink-soft);
+    text-decoration:none;
+    font-size:.88rem;
+    transition:color .15s;
+  }
+  .toc-col a:hover{color:var(--cinnabar);}
+  .toc-col li.indent a{padding-left:14px;font-size:.82rem;opacity:.85;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section{
+    margin-top:74px;
+    scroll-margin-top:20px;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:18px;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:12px;
+    margin-bottom:8px;
+  }
+  .section-head .num{
+    font-family:"Fraunces",serif;
+    font-size:2.4rem;
+    font-weight:700;
+    color:var(--cinnabar);
+    line-height:1;
+  }
+  .section-head h2{
+    font-family:"Fraunces",serif;
+    font-size:clamp(1.5rem,3vw,2.05rem);
+    font-weight:600;
+    margin:0;
+    line-height:1.1;
+  }
+  .section-head .zh{
+    font-family:"Noto Serif SC",serif;
+    color:var(--ink-soft);
+    font-size:1rem;
+    margin-left:auto;
+    letter-spacing:.1em;
+    white-space:nowrap;
+  }
+  .section > p.lead{
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:14px 0 0;
+  }
+
+  /* ---------- SUBCATEGORY ---------- */
+  .sub{margin-top:46px;scroll-margin-top:20px;}
+  .sub h3{
+    font-family:"Fraunces",serif;
+    font-size:1.32rem;
+    font-weight:600;
+    margin:0 0 4px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .sub h3 .dot{
+    width:9px;height:9px;border-radius:50%;
+    background:var(--cinnabar);
+    flex:none;
+  }
+  .sub h3 .zh{
+    font-family:"Noto Serif SC",serif;
+    font-size:.85rem;
+    color:var(--gold);
+    font-weight:400;
+    letter-spacing:.08em;
+  }
+  .sub.nested h3{font-size:1.12rem;}
+  .sub.nested h3 .dot{width:7px;height:7px;background:var(--gold);}
+  .sub-label{
+    font-family:"Spectral",serif;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:.68rem;
+    color:var(--gold);
+    margin:0 0 4px 21px;
+    font-weight:600;
+  }
+
+  /* ---------- TABLES ---------- */
+  .table-scroll{overflow-x:auto;margin-top:16px;border-radius:10px;}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    font-size:.92rem;
+  }
+  thead th{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    font-size:.82rem;
+    letter-spacing:.03em;
+    text-align:left;
+    padding:11px 14px;
+    vertical-align:middle;
+  }
+  thead th:nth-child(1){width:21%;}
+  thead th:nth-child(2){width:20%;}
+  thead th:nth-child(3){width:27%;}
+  thead th:nth-child(4){width:32%;}
+  tbody td{
+    padding:13px 14px;
+    border-top:1px solid var(--line-soft);
+    vertical-align:top;
+  }
+  tbody tr:nth-child(even){background:var(--paper-2);}
+  tbody tr:hover{background:var(--paper-3);}
+
+  .gp{
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    color:var(--cinnabar-deep);
+    font-size:.95rem;
+    line-height:1.35;
+  }
+  .pat{
+    font-family:"Noto Serif SC",serif;
+    font-size:.98rem;
+    color:var(--ink);
+    background:var(--paper-2);
+    border-left:3px solid var(--gold);
+    padding:5px 9px;
+    border-radius:0 5px 5px 0;
+    display:inline-block;
+    line-height:1.7;
+  }
+  tbody tr:nth-child(even) .pat{background:#fff;}
+  .pat .var{
+    font-family:"Fraunces",serif;
+    font-style:italic;
+    font-weight:600;
+    color:var(--cinnabar);
+  }
+  .expl{color:var(--ink);line-height:1.5;}
+
+  .ex{margin:0;padding:0;list-style:none;}
+  .ex li{
+    margin:0 0 9px;
+    padding-left:20px;
+    position:relative;
+    line-height:1.45;
+  }
+  .ex li:last-child{margin-bottom:0;}
+  .ex li::before{
+    content:counter(none);
+    counter-increment:exc;
+    content:counter(exc);
+    position:absolute;left:0;top:1px;
+    font-family:"Fraunces",serif;
+    font-weight:700;
+    font-size:.72rem;
+    color:#fff;
+    background:var(--cinnabar);
+    width:15px;height:15px;line-height:15px;
+    text-align:center;border-radius:50%;
+  }
+  .ex{counter-reset:exc;}
+  .zh-ex{
+    font-family:"Noto Serif SC",serif;
+    font-size:1.02rem;
+    color:var(--ink);
+    letter-spacing:.02em;
+  }
+  .es-ex{
+    display:block;
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:.86rem;
+    margin-top:1px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    margin-top:80px;
+    padding-top:26px;
+    border-top:2px solid var(--ink);
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:.85rem;
+  }
+  footer .stamp-sm{
+    font-family:"Noto Serif SC",serif;
+    color:var(--cinnabar);
+    font-size:1.1rem;
+    letter-spacing:.2em;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:820px){
+    .toc-grid{grid-template-columns:1fr 1fr;}
+    thead th{font-size:.74rem;}
+    tbody td{font-size:.85rem;}
+  }
+  @media (max-width:560px){
+    .toc-grid{grid-template-columns:1fr;}
+    table{font-size:.82rem;min-width:560px;}
+    .section-head .zh{display:none;}
+  }
+
+  /* ---------- PRINT ---------- */
+  @media print{
+    body{background:#fff;font-size:11px;}
+    nav.toc{box-shadow:none;}
+    .table-scroll{overflow:visible;}
+    table{font-size:10px;page-break-inside:auto;}
+    tr{page-break-inside:avoid;}
+    .section{page-break-before:auto;}
+    .sub h3{page-break-after:avoid;}
+    thead{display:table-header-group;}
+  }
+</style>
+</head>
+<body>
+
+<header id="nav-placeholder"></header>
+
+<header class="hero">
+  <div class="stamp">语</div>
+  <p class="kicker">Repaso rápido · Nivel inicial</p>
+  <h1>Gramática <em>HSK 2</em></h1>
+  <div class="sub">汉语水平考试 · 二级 · 语法总复习</div>
+</header>
+
+<div class="wrap">
+
+  <p class="intro">
+    Guía de consulta rápida con todos los puntos gramaticales del HSK 2, organizados por
+    partes de la oración, estructuras y comparaciones. Cada punto incluye su patrón,
+    una explicación breve y ejemplos con vocabulario del nivel.
+  </p>
+
+  <div class="legend">
+    <span class="abbr"><code>Subj.</code> = Sujeto</span>
+    <span class="abbr"><code>Obj.</code> = Objeto</span>
+    <span class="abbr"><code>Verb</code> = Verbo</span>
+    <span class="abbr"><code>Adj.</code> = Adjetivo</span>
+    <span class="abbr"><code>Noun</code> = Sustantivo</span>
+    <span class="abbr"><code>Number</code> = Número</span>
+    <span class="abbr"><code>MW</code> = Clasificador</span>
+  </div>
+
+  <!-- ============ TOC ============ -->
+  <nav class="toc">
+    <h2>Contenido</h2>
+    <div class="toc-grid">
+      <div class="toc-col">
+        <h3>1 · Partes de la oración</h3>
+        <ul>
+          <li><a href="#adv">1.1 Adverbios</a></li>
+          <li><a href="#advadj">1.2 Adverbios con adjetivos</a></li>
+          <li><a href="#conj">1.3 Conjunciones</a></li>
+          <li><a href="#nouns">1.4 Sustantivos</a></li>
+          <li><a href="#nums">1.5 Números</a></li>
+          <li><a href="#part">1.6 Partículas</a></li>
+          <li><a href="#prep">1.7 Preposiciones</a></li>
+          <li><a href="#verbs">1.8 Verbos</a></li>
+          <li class="indent"><a href="#aux">1.8.1 Verbos auxiliares</a></li>
+          <li class="indent"><a href="#vphr">1.8.2 Frases verbales</a></li>
+        </ul>
+      </div>
+      <div class="toc-col">
+        <h3>2 · Estructuras gramaticales</h3>
+        <ul>
+          <li><a href="#compl">2.1 Complementos</a></li>
+          <li><a href="#numw">2.2 Números y clasificadores</a></li>
+          <li><a href="#quest">2.3 Formas de pregunta</a></li>
+          <li><a href="#patt">2.4 Patrones de oraciones</a></li>
+          <li class="indent"><a href="#patt-basic">2.4.1 Patrones simples</a></li>
+          <li class="indent"><a href="#patt-comp">2.4.2 Comparación</a></li>
+          <li class="indent"><a href="#patt-cplx">2.4.3 Patrones complejos</a></li>
+        </ul>
+      </div>
+      <div class="toc-col">
+        <h3>3 · Comparaciones</h3>
+        <ul>
+          <li><a href="#cmp-aux">3.1 Verbos auxiliares</a></li>
+          <li><a href="#cmp-num">3.2 Números</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ SECTION 1 ============ -->
+  <section class="section" id="s1">
+    <div class="section-head">
+      <span class="num">1</span>
+      <h2>Partes de la oración</h2>
+      <span class="zh">词类</span>
+    </div>
+    <p class="lead">Puntos gramaticales que encajan claramente dentro de una categoría de palabra.</p>
+
+    <!-- 1.1 Adverbs -->
+    <div class="sub" id="adv">
+      <h3><span class="dot"></span>1.1 Adverbios <span class="zh">副词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">«Seguir haciendo algo» con «还»</td>
+            <td><span class="pat"><span class="var">Subj.</span> + 还 + <span class="var">Verb</span> / <span class="var">Adj.</span></span></td>
+            <td class="expl">«还» indica que una acción o estado continúa en el momento presente: «todavía, aún».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你还在看书？</span><span class="es-ex">¿Todavía estás leyendo?</span></li>
+              <li><span class="zh-ex">他还没回家。</span><span class="es-ex">Aún no ha vuelto a casa.</span></li>
+              <li><span class="zh-ex">现在还很早。</span><span class="es-ex">Todavía es muy temprano.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Énfasis con «就是»</td>
+            <td><span class="pat">就是 + <span class="var">Verb</span></span></td>
+            <td class="expl">«就是» refuerza el verbo para insistir, a menudo con cierta obstinación: «es que, sencillamente».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">妈妈就是不让我一个人去。</span><span class="es-ex">Mamá sencillamente no me deja ir sola.</span></li>
+              <li><span class="zh-ex">我就是不想去。</span><span class="es-ex">Es que no quiero ir.</span></li>
+              <li><span class="zh-ex">他就是不说话。</span><span class="es-ex">Sencillamente no habla.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Enfatizar la cantidad con «都»</td>
+            <td><span class="pat">大家 / 很多人 + 都……</span></td>
+            <td class="expl">«都» recoge un grupo amplio (todos, mucha gente, muchos sitios) para subrayar que algo aplica a todos.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">很多地方都有 wifi。</span><span class="es-ex">Muchos sitios tienen wifi.</span></li>
+              <li><span class="zh-ex">大家都喜欢他。</span><span class="es-ex">A todos les cae bien.</span></li>
+              <li><span class="zh-ex">很多人都来了。</span><span class="es-ex">Vino mucha gente.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Estar a punto de» con «就要……了»</td>
+            <td><span class="pat">(还有 + tiempo +) 就要 + <span class="var">Verb</span> + 了</span></td>
+            <td class="expl">«就要……了» anuncia que algo sucederá muy pronto; suele ir precedido del tiempo que falta.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">还有五天就要考试了。</span><span class="es-ex">En cinco días es el examen.</span></li>
+              <li><span class="zh-ex">火车就要开了。</span><span class="es-ex">El tren está a punto de salir.</span></li>
+              <li><span class="zh-ex">就要下雨了。</span><span class="es-ex">Va a llover en seguida.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Otra vez» en futuro con «再»</td>
+            <td><span class="pat">再 + <span class="var">Verb</span></span></td>
+            <td class="expl">«再» expresa la repetición de una acción que aún no ha ocurrido, en el futuro: «volver a, otra vez».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我下次再来。</span><span class="es-ex">Vuelvo la próxima vez.</span></li>
+              <li><span class="zh-ex">请再说一次。</span><span class="es-ex">Dilo otra vez, por favor.</span></li>
+              <li><span class="zh-ex">我们明天再说。</span><span class="es-ex">Lo hablamos mañana otra vez.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Ya» con «都……了»</td>
+            <td><span class="pat">都 + tiempo + 了</span></td>
+            <td class="expl">Aquí «都» equivale a «ya» y enfatiza que es tarde o que el tiempo ha pasado; cierra con «了».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">都九点了，快点起床！</span><span class="es-ex">¡Ya son las nueve, levántate rápido!</span></li>
+              <li><span class="zh-ex">都很晚了。</span><span class="es-ex">Ya es muy tarde.</span></li>
+              <li><span class="zh-ex">都十二点了，快睡觉吧。</span><span class="es-ex">Ya son las doce, a dormir.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Ya» con «已经……了»</td>
+            <td><span class="pat">已经……了</span></td>
+            <td class="expl">«已经» indica que una acción ya se ha completado; normalmente se acompaña de «了».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">他已经走了。</span><span class="es-ex">Ya se ha ido.</span></li>
+              <li><span class="zh-ex">我已经吃饭了。</span><span class="es-ex">Ya he comido.</span></li>
+              <li><span class="zh-ex">电影已经开始了。</span><span class="es-ex">La película ya ha empezado.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Además / también» con «还»</td>
+            <td><span class="pat">还 + <span class="var">Verb</span></span></td>
+            <td class="expl">«还» añade información extra a lo ya dicho: «además, también».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">她有一个弟弟，还有一个妹妹。</span><span class="es-ex">Tiene un hermano menor y también una hermana menor.</span></li>
+              <li><span class="zh-ex">我想喝茶，还想吃点东西。</span><span class="es-ex">Quiero té y también algo de comer.</span></li>
+              <li><span class="zh-ex">他会说英语，还会说汉语。</span><span class="es-ex">Habla inglés y además chino.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Anticipación con «就»</td>
+            <td><span class="pat"><span class="var">Subj.</span> + tiempo + 就 + <span class="var">Verb</span> + 了</span></td>
+            <td class="expl">«就» tras una expresión de tiempo señala que la acción ocurrió antes de lo esperado: «ya, tan pronto como».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我昨晚八点半就睡觉了。</span><span class="es-ex">Anoche me acosté ya a las ocho y media.</span></li>
+              <li><span class="zh-ex">他七点就到了。</span><span class="es-ex">Llegó ya a las siete.</span></li>
+              <li><span class="zh-ex">我早上六点就起床了。</span><span class="es-ex">Me levanté ya a las seis.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Entonces» con «就»</td>
+            <td><span class="pat">…… 就 + <span class="var">Verb Phrase</span></span></td>
+            <td class="expl">«就» enlaza una situación o condición con su consecuencia inmediata: «entonces, en ese caso».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我们现在有时间，就去吧。</span><span class="es-ex">Tenemos tiempo ahora, así que vamos.</span></li>
+              <li><span class="zh-ex">你累了就休息。</span><span class="es-ex">Si estás cansado, descansa.</span></li>
+              <li><span class="zh-ex">喜欢就买吧。</span><span class="es-ex">Si te gusta, cómpralo.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Prohibiciones con «别»</td>
+            <td><span class="pat">别 + <span class="var">Verb</span></span></td>
+            <td class="expl">«别» forma órdenes negativas: «no (hagas)…». Es la forma habitual para pedir que alguien no haga algo.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">别走。</span><span class="es-ex">No te vayas.</span></li>
+              <li><span class="zh-ex">别说话。</span><span class="es-ex">No hables.</span></li>
+              <li><span class="zh-ex">别太累了。</span><span class="es-ex">No te canses demasiado.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.2 Adverbs with Adjectives -->
+    <div class="sub" id="advadj">
+      <h3><span class="dot"></span>1.2 Adverbios con adjetivos <span class="zh">副词 + 形容词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Preguntar por el grado con «多»</td>
+            <td><span class="pat"><span class="var">Subj.</span> + 多 + <span class="var">Adj.</span> ?</span></td>
+            <td class="expl">«多 + adjetivo» pregunta por el grado o la medida de algo: «¿cómo de…? / ¿cuánto…?».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">他多高？</span><span class="es-ex">¿Cómo de alto es?</span></li>
+              <li><span class="zh-ex">你多大？</span><span class="es-ex">¿Cuántos años tienes?</span></li>
+              <li><span class="zh-ex">这条路多长？</span><span class="es-ex">¿Qué longitud tiene esta calle?</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Un poco (de más)» con «有点(儿)»</td>
+            <td><span class="pat">有点(儿) + <span class="var">Adj.</span></span></td>
+            <td class="expl">«有点儿» antepuesto a un adjetivo expresa un grado leve, casi siempre con matiz negativo: «un poco, algo».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我有点饿。</span><span class="es-ex">Tengo algo de hambre.</span></li>
+              <li><span class="zh-ex">今天有点冷。</span><span class="es-ex">Hoy hace un poco de frío.</span></li>
+              <li><span class="zh-ex">这个有点贵。</span><span class="es-ex">Esto es un poco caro.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Distancia con «离»</td>
+            <td><span class="pat">Lugar1 + 离 + Lugar2 + Adv. + 远 / 近</span></td>
+            <td class="expl">«离» marca la distancia entre dos puntos; se cierra con «远» (lejos) o «近» (cerca).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我家离公司很近。</span><span class="es-ex">Mi casa está cerca de la oficina.</span></li>
+              <li><span class="zh-ex">学校离这儿不远。</span><span class="es-ex">La escuela no está lejos de aquí.</span></li>
+              <li><span class="zh-ex">火车站离这里很远。</span><span class="es-ex">La estación está muy lejos de aquí.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Intensificar con «可……了»</td>
+            <td><span class="pat">可 + <span class="var">Adj.</span> (+ 了)</span></td>
+            <td class="expl">«可……了» intensifica el adjetivo con un tono expresivo y coloquial: «¡qué… / lo más…!».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">这个菜可好吃了。</span><span class="es-ex">¡Este plato está riquísimo!</span></li>
+              <li><span class="zh-ex">今天可热了。</span><span class="es-ex">¡Hoy hace un calor tremendo!</span></li>
+              <li><span class="zh-ex">他可忙了。</span><span class="es-ex">¡Está ocupadísimo!</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Intensificar con «太……了»</td>
+            <td><span class="pat">太 + <span class="var">Adj.</span> + 了</span></td>
+            <td class="expl">«太……了» expresa un grado excesivo o una exclamación entusiasta: «demasiado / ¡qué…!».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">太好了！</span><span class="es-ex">¡Genial!</span></li>
+              <li><span class="zh-ex">这里太热了。</span><span class="es-ex">Aquí hace demasiado calor.</span></li>
+              <li><span class="zh-ex">你太忙了。</span><span class="es-ex">Estás demasiado ocupado.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Matizar con «还»</td>
+            <td><span class="pat">还 + <span class="var">Adj.</span></span></td>
+            <td class="expl">«还 + adjetivo» suaviza la valoración: «aceptable, pasable, no está mal».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">还好。</span><span class="es-ex">No está mal.</span></li>
+              <li><span class="zh-ex">还可以。</span><span class="es-ex">Pasable.</span></li>
+              <li><span class="zh-ex">这个菜还不错。</span><span class="es-ex">Este plato está bastante bien.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.3 Conjunctions -->
+    <div class="sub" id="conj">
+      <h3><span class="dot"></span>1.3 Conjunciones <span class="zh">连词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">«Si» con «要是……，就……»</td>
+            <td><span class="pat">要是……，就……</span></td>
+            <td class="expl">«要是» introduce una condición y «就» su consecuencia: «si…, entonces…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">要是不来，就说一下。</span><span class="es-ex">Si no vienes, avísame.</span></li>
+              <li><span class="zh-ex">要是下雨，我就不去了。</span><span class="es-ex">Si llueve, no voy.</span></li>
+              <li><span class="zh-ex">要是你忙，就明天做。</span><span class="es-ex">Si estás ocupado, hazlo mañana.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«No solo… sino también…» con «不但……，而且……»</td>
+            <td><span class="pat">不但……，而且……</span></td>
+            <td class="expl">«不但……而且……» suma dos cualidades o acciones, intensificando: «no solo…, sino que además…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">他不但会说英语，而且会说汉语。</span><span class="es-ex">No solo habla inglés, sino también chino.</span></li>
+              <li><span class="zh-ex">这个菜不但好吃，而且便宜。</span><span class="es-ex">Este plato no solo está bueno, sino que además es barato.</span></li>
+              <li><span class="zh-ex">她不但会唱歌，而且会跳舞。</span><span class="es-ex">No solo canta, sino que además baila.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«O» en afirmaciones con «或者»</td>
+            <td><span class="pat">……或者……</span></td>
+            <td class="expl">«或者» une alternativas en una oración afirmativa (no en preguntas): «o, o bien».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我想去北京或者上海。</span><span class="es-ex">Quiero ir a Pekín o a Shanghái.</span></li>
+              <li><span class="zh-ex">喝茶或者咖啡都行。</span><span class="es-ex">Té o café, cualquiera vale.</span></li>
+              <li><span class="zh-ex">你或者我去都可以。</span><span class="es-ex">Puedo ir yo o tú.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Con» con «跟»</td>
+            <td><span class="pat">跟 + … + <span class="var">Verb</span></span></td>
+            <td class="expl">«跟» introduce a la persona que acompaña la acción: «con (alguien)».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你要跟我一起去吗？</span><span class="es-ex">¿Quieres venir conmigo?</span></li>
+              <li><span class="zh-ex">我跟朋友看电影。</span><span class="es-ex">Veo una peli con un amigo.</span></li>
+              <li><span class="zh-ex">他跟老师说话。</span><span class="es-ex">Habla con el profesor.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Ofrecer opciones con «还是»</td>
+            <td><span class="pat">A + 还是 + B ?</span></td>
+            <td class="expl">«还是» plantea una elección entre dos opciones dentro de una pregunta: «¿… o …?».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你要喝茶还是咖啡？</span><span class="es-ex">¿Quieres té o café?</span></li>
+              <li><span class="zh-ex">我们今天去还是明天去？</span><span class="es-ex">¿Vamos hoy o mañana?</span></li>
+              <li><span class="zh-ex">你坐车还是走路？</span><span class="es-ex">¿Vas en coche o a pie?</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.4 Nouns -->
+    <div class="sub" id="nouns">
+      <h3><span class="dot"></span>1.4 Sustantivos <span class="zh">名词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">«Antes» con «以前»</td>
+            <td><span class="pat">以前，……</span></td>
+            <td class="expl">«以前» sitúa algo en un pasado general o anterior a un momento: «antes, en el pasado».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">以前，我不会说中文。</span><span class="es-ex">Antes no sabía hablar chino.</span></li>
+              <li><span class="zh-ex">以前这里没有商店。</span><span class="es-ex">Antes aquí no había tiendas.</span></li>
+              <li><span class="zh-ex">三年以前他来过中国。</span><span class="es-ex">Hace tres años vino a China.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Hace un momento» con «刚才»</td>
+            <td><span class="pat">刚才 + <span class="var">Verb</span></span></td>
+            <td class="expl">«刚才» se refiere a un instante muy reciente del pasado inmediato: «hace un momento, recién».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你刚才说什么了？</span><span class="es-ex">¿Qué has dicho hace un momento?</span></li>
+              <li><span class="zh-ex">我刚才看见他了。</span><span class="es-ex">Lo acabo de ver.</span></li>
+              <li><span class="zh-ex">他刚才还在这儿。</span><span class="es-ex">Hace un momento estaba aquí.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Cuando / al» con «……时»</td>
+            <td><span class="pat">tiempo / evento + 时</span></td>
+            <td class="expl">«时» tras una acción o momento indica «cuando / al (hacer algo)».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">考试时不要说话。</span><span class="es-ex">No habléis durante el examen.</span></li>
+              <li><span class="zh-ex">睡觉时别说话。</span><span class="es-ex">No hables mientras duermes.</span></li>
+              <li><span class="zh-ex">上课时要听老师的话。</span><span class="es-ex">En clase hay que escuchar al profesor.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Después / en el futuro» con «以后»</td>
+            <td><span class="pat">以后，……</span></td>
+            <td class="expl">«以后» señala un momento posterior o el futuro en general: «después, más adelante».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">以后，你不要问我。</span><span class="es-ex">De ahora en adelante, no me preguntes.</span></li>
+              <li><span class="zh-ex">以后我想去中国。</span><span class="es-ex">En el futuro quiero ir a China.</span></li>
+              <li><span class="zh-ex">下课以后我们去吃饭。</span><span class="es-ex">Después de clase vamos a comer.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Secuenciar el pasado con «后来»</td>
+            <td><span class="pat">……，后来……</span></td>
+            <td class="expl">«后来» enlaza acontecimientos pasados indicando «más tarde, después» (solo para el pasado).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">开始他不想去，后来去了。</span><span class="es-ex">Al principio no quería ir, pero luego fue.</span></li>
+              <li><span class="zh-ex">我先去了商店，后来回家了。</span><span class="es-ex">Primero fui a la tienda y luego volví a casa.</span></li>
+              <li><span class="zh-ex">他后来怎么样了？</span><span class="es-ex">¿Qué fue de él después?</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.5 Numbers -->
+    <div class="sub" id="nums">
+      <h3><span class="dot"></span>1.5 Números <span class="zh">数词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Números grandes en chino</td>
+            <td><span class="pat"><span class="var">Number</span> + 万 / 亿</span></td>
+            <td class="expl">A partir de 10 000 el chino agrupa con «万» (diez mil) y «亿» (cien millones), no con miles.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">五万</span><span class="es-ex">Cincuenta mil.</span></li>
+              <li><span class="zh-ex">两万块钱</span><span class="es-ex">Veinte mil yuanes.</span></li>
+              <li><span class="zh-ex">一亿人</span><span class="es-ex">Cien millones de personas.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">La hora (detallada)</td>
+            <td><span class="pat">Número1 + 点(钟) + Número2 + 分</span></td>
+            <td class="expl">Para dar la hora con minutos: la hora con «点» y los minutos con «分».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">现在十一点十八分。</span><span class="es-ex">Son las once y dieciocho.</span></li>
+              <li><span class="zh-ex">八点半</span><span class="es-ex">Las ocho y media.</span></li>
+              <li><span class="zh-ex">三点十五分</span><span class="es-ex">Las tres y cuarto.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">La hora (básica)</td>
+            <td><span class="pat">Número + 点(钟)</span></td>
+            <td class="expl">Para decir la hora en punto se usa «点» (o «点钟»).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">现在十一点。</span><span class="es-ex">Son las once.</span></li>
+              <li><span class="zh-ex">我七点起床。</span><span class="es-ex">Me levanto a las siete.</span></li>
+              <li><span class="zh-ex">我们三点见。</span><span class="es-ex">Nos vemos a las tres.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.6 Particles -->
+    <div class="sub" id="part">
+      <h3><span class="dot"></span>1.6 Partículas <span class="zh">助词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Cambio de estado con «了»</td>
+            <td><span class="pat">……了</span></td>
+            <td class="expl">«了» al final de la oración indica un cambio de situación o una situación nueva: «ya, ahora».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我 25 岁了。</span><span class="es-ex">Ya tengo 25 años.</span></li>
+              <li><span class="zh-ex">下雨了。</span><span class="es-ex">Se ha puesto a llover.</span></li>
+              <li><span class="zh-ex">我饿了。</span><span class="es-ex">Me ha entrado hambre.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Experiencias con «过»</td>
+            <td><span class="pat"><span class="var">Verb</span> + 过</span></td>
+            <td class="expl">«过» tras el verbo indica que algo se ha experimentado alguna vez: «haber (hecho alguna vez)».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我去过中国。</span><span class="es-ex">He estado en China.</span></li>
+              <li><span class="zh-ex">你吃过中国菜吗？</span><span class="es-ex">¿Has probado la comida china?</span></li>
+              <li><span class="zh-ex">他来过我家。</span><span class="es-ex">Ha venido a mi casa alguna vez.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">La partícula modal «呢»</td>
+            <td><span class="pat">……呢 ?</span></td>
+            <td class="expl">«呢» suaviza la pregunta, la devuelve («¿y…?») o marca una situación en curso.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我不要回家。还早呢！</span><span class="es-ex">No quiero volver a casa, ¡todavía es temprano!</span></li>
+              <li><span class="zh-ex">我很好，你呢？</span><span class="es-ex">Estoy bien, ¿y tú?</span></li>
+              <li><span class="zh-ex">他在做什么呢？</span><span class="es-ex">¿Qué está haciendo?</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«过» junto con «了»</td>
+            <td><span class="pat"><span class="var">Verb</span> + 过 + 了</span></td>
+            <td class="expl">«过了» indica que la acción ya se completó del todo (un hecho ya realizado y cerrado).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">她吃过了。</span><span class="es-ex">Ya ha comido.</span></li>
+              <li><span class="zh-ex">这本书我看过了。</span><span class="es-ex">Ya he leído este libro.</span></li>
+              <li><span class="zh-ex">药我吃过了。</span><span class="es-ex">Ya me he tomado la medicina.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.7 Prepositions -->
+    <div class="sub" id="prep">
+      <h3><span class="dot"></span>1.7 Preposiciones <span class="zh">介词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Comparaciones básicas con «比»</td>
+            <td><span class="pat">Nombre1 + 比 + Nombre2 + <span class="var">Adj.</span></span></td>
+            <td class="expl">«比» compara dos elementos: «A es más… que B». El adjetivo va sin «很».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你比我高。</span><span class="es-ex">Eres más alto que yo.</span></li>
+              <li><span class="zh-ex">今天比昨天热。</span><span class="es-ex">Hoy hace más calor que ayer.</span></li>
+              <li><span class="zh-ex">这个比那个贵。</span><span class="es-ex">Este es más caro que aquel.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Para / a» con «给»</td>
+            <td><span class="pat"><span class="var">Subj.</span> + 给 + destinatario + <span class="var">Verb Phrase</span></span></td>
+            <td class="expl">«给» introduce a la persona que se beneficia de la acción: «para / a (alguien)».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">妈妈在给孩子们做饭。</span><span class="es-ex">Mamá está cocinando para los niños.</span></li>
+              <li><span class="zh-ex">我给你打电话。</span><span class="es-ex">Te llamo por teléfono.</span></li>
+              <li><span class="zh-ex">他给我买了一本书。</span><span class="es-ex">Me compró un libro.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«De… a…» con «从……到……»</td>
+            <td><span class="pat">从……到……</span></td>
+            <td class="expl">«从……到……» marca el inicio y el final de un trayecto o un periodo: «desde… hasta…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">从 1 号到 5 号我在上海。</span><span class="es-ex">Del día 1 al 5 estoy en Shanghái.</span></li>
+              <li><span class="zh-ex">从家到公司很近。</span><span class="es-ex">De casa al trabajo hay poco.</span></li>
+              <li><span class="zh-ex">从早上到晚上他都在工作。</span><span class="es-ex">Trabaja de la mañana a la noche.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Hacia» con «往»</td>
+            <td><span class="pat">往 + dirección / lugar + <span class="var">Verb</span></span></td>
+            <td class="expl">«往» indica la dirección de un movimiento: «hacia, en dirección a».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">往前走。</span><span class="es-ex">Sigue recto / camina hacia delante.</span></li>
+              <li><span class="zh-ex">往右走。</span><span class="es-ex">Ve hacia la derecha.</span></li>
+              <li><span class="zh-ex">往这边来。</span><span class="es-ex">Ven hacia aquí.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Hacia / con» con «对»</td>
+            <td><span class="pat"><span class="var">Subj.</span> + 对 + persona + <span class="var">Verb</span></span></td>
+            <td class="expl">«对» marca el objeto o la persona hacia quien se dirige una actitud o acción.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">孩子对我笑了。</span><span class="es-ex">El niño me sonrió.</span></li>
+              <li><span class="zh-ex">他对我很好。</span><span class="es-ex">Se porta muy bien conmigo.</span></li>
+              <li><span class="zh-ex">老师对学生很客气。</span><span class="es-ex">El profesor es muy amable con los alumnos.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.8 Verbs -->
+    <div class="sub" id="verbs">
+      <h3><span class="dot"></span>1.8 Verbos <span class="zh">动词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">El verbo «姓»</td>
+            <td><span class="pat">姓 + apellido</span></td>
+            <td class="expl">«姓» significa «apellidarse»; se usa para decir o preguntar el apellido de alguien.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你姓什么？</span><span class="es-ex">¿Cuál es tu apellido?</span></li>
+              <li><span class="zh-ex">我姓王。</span><span class="es-ex">Me apellido Wang.</span></li>
+              <li><span class="zh-ex">他姓李。</span><span class="es-ex">Se apellida Li.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.8.1 Auxiliary verbs -->
+    <div class="sub nested" id="aux">
+      <p class="sub-label">Subcategoría de 1.8 Verbos</p>
+      <h3><span class="dot"></span>1.8.1 Verbos auxiliares <span class="zh">能愿动词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">El auxiliar «要» y sus significados</td>
+            <td><span class="pat">要 + <span class="var">Noun</span> / 要 + <span class="var">Verb</span></span></td>
+            <td class="expl">«要» tiene varios sentidos: «querer/pedir» algo, «querer hacer» o «ir a hacer» (futuro).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我要一杯水。</span><span class="es-ex">Quiero un vaso de agua.</span></li>
+              <li><span class="zh-ex">我要去北京。</span><span class="es-ex">Voy a ir a Pekín.</span></li>
+              <li><span class="zh-ex">你要什么？</span><span class="es-ex">¿Qué quieres?</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Ir a» con «要……(了)»</td>
+            <td><span class="pat"><span class="var">Subj.</span> + 要 + <span class="var">Verb</span> (+ 了)</span></td>
+            <td class="expl">«要……了» anuncia algo inminente o una intención de futuro: «ir a (hacer algo)».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我要去吃饭，你去吗？</span><span class="es-ex">Voy a comer, ¿vienes?</span></li>
+              <li><span class="zh-ex">我们要回家了。</span><span class="es-ex">Ya nos vamos a casa.</span></li>
+              <li><span class="zh-ex">他要走了。</span><span class="es-ex">Está a punto de irse.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Permiso con «可以»</td>
+            <td><span class="pat">可以 + <span class="var">Verb</span></span></td>
+            <td class="expl">«可以» expresa permiso o posibilidad: «poder, estar permitido».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">这里可以吃饭吗？</span><span class="es-ex">¿Se puede comer aquí?</span></li>
+              <li><span class="zh-ex">我可以进来吗？</span><span class="es-ex">¿Puedo pasar?</span></li>
+              <li><span class="zh-ex">你可以坐这里。</span><span class="es-ex">Puedes sentarte aquí.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Querer hacer algo con «要»</td>
+            <td><span class="pat">要 + <span class="var">Verb</span></span></td>
+            <td class="expl">«要 + verbo» expresa el deseo o la voluntad de hacer algo: «querer (hacer)».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我要吃饭。</span><span class="es-ex">Quiero comer.</span></li>
+              <li><span class="zh-ex">我要学习汉语。</span><span class="es-ex">Quiero estudiar chino.</span></li>
+              <li><span class="zh-ex">他要看电影。</span><span class="es-ex">Quiere ver una película.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 1.8.2 Verb phrases -->
+    <div class="sub nested" id="vphr">
+      <p class="sub-label">Subcategoría de 1.8 Verbos</p>
+      <h3><span class="dot"></span>1.8.2 Frases verbales <span class="zh">动词短语</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Acciones en serie</td>
+            <td><span class="pat">(<span class="var">Verb Phrase 1</span>) + (<span class="var">Verb Phrase 2</span>)</span></td>
+            <td class="expl">Dos sintagmas verbales seguidos describen acciones encadenadas; el primero suele indicar el medio o el propósito.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我们去咖啡店喝咖啡吧。</span><span class="es-ex">Vamos a la cafetería a tomar café.</span></li>
+              <li><span class="zh-ex">我去商店买东西。</span><span class="es-ex">Voy a la tienda a comprar cosas.</span></li>
+              <li><span class="zh-ex">他坐车去公司。</span><span class="es-ex">Va al trabajo en autobús.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Juntos» con «一起»</td>
+            <td><span class="pat">一起 + <span class="var">Verb</span></span></td>
+            <td class="expl">«一起» indica que la acción se hace en compañía: «juntos, en grupo».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我们一起去吧！</span><span class="es-ex">¡Vamos juntos!</span></li>
+              <li><span class="zh-ex">我们一起吃饭。</span><span class="es-ex">Comemos juntos.</span></li>
+              <li><span class="zh-ex">一起看电影吧。</span><span class="es-ex">Veamos una peli juntos.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Clasificadores verbales</td>
+            <td><span class="pat"><span class="var">Verb</span> + <span class="var">Number</span> + <span class="var">MW</span></span></td>
+            <td class="expl">Tras el verbo, un número y un clasificador verbal (次, 遍…) cuentan las veces que se realiza la acción.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">做三次。</span><span class="es-ex">Hazlo tres veces.</span></li>
+              <li><span class="zh-ex">读两遍。</span><span class="es-ex">Léelo dos veces.</span></li>
+              <li><span class="zh-ex">我去过一次。</span><span class="es-ex">He ido una vez.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Prohibiciones con «不要»</td>
+            <td><span class="pat">不要 + <span class="var">Verb</span></span></td>
+            <td class="expl">«不要» forma órdenes negativas, equivalente a «别»: «no (hagas)…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">不要说英文！</span><span class="es-ex">¡No hables en inglés!</span></li>
+              <li><span class="zh-ex">不要走。</span><span class="es-ex">No te vayas.</span></li>
+              <li><span class="zh-ex">不要太累了。</span><span class="es-ex">No te canses demasiado.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Reduplicación de verbos</td>
+            <td><span class="pat"><span class="var">Verb</span> + <span class="var">Verb</span></span></td>
+            <td class="expl">Repetir el verbo suaviza la acción y le da un tono breve y relajado: «un poco, a ver».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你看看。</span><span class="es-ex">Echa un vistazo.</span></li>
+              <li><span class="zh-ex">我们说说吧。</span><span class="es-ex">Hablémoslo un poco.</span></li>
+              <li><span class="zh-ex">你听听。</span><span class="es-ex">Escucha un momento.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«在» tras el verbo (ubicación)</td>
+            <td><span class="pat"><span class="var">Verb</span> + 在 + lugar</span></td>
+            <td class="expl">Algunos verbos se siguen de «在 + lugar» para indicar dónde queda algo o alguien tras la acción.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我住在北京。</span><span class="es-ex">Vivo en Pekín.</span></li>
+              <li><span class="zh-ex">他坐在前面。</span><span class="es-ex">Está sentado delante.</span></li>
+              <li><span class="zh-ex">他坐在我旁边。</span><span class="es-ex">Está sentado a mi lado.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«到» con sentido de «llegar a / ir a»</td>
+            <td><span class="pat">到 + lugar</span></td>
+            <td class="expl">«到 + lugar» expresa llegar o ir a un sitio: «llegar a».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我到上海。</span><span class="es-ex">Llego a Shanghái.</span></li>
+              <li><span class="zh-ex">他到家了。</span><span class="es-ex">Ya ha llegado a casa.</span></li>
+              <li><span class="zh-ex">我们到学校了。</span><span class="es-ex">Hemos llegado a la escuela.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«好» con sentido de «fácil»</td>
+            <td><span class="pat">好 + <span class="var">Verb</span></span></td>
+            <td class="expl">Delante de algunos verbos, «好» significa «fácil de…»: «好做» (fácil de hacer), «好买» (fácil de conseguir).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">好做。</span><span class="es-ex">Es fácil de hacer.</span></li>
+              <li><span class="zh-ex">好买。</span><span class="es-ex">Es fácil de comprar.</span></li>
+              <li><span class="zh-ex">这个字很好写。</span><span class="es-ex">Este carácter es fácil de escribir.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Acción breve con «一下»</td>
+            <td><span class="pat"><span class="var">Verb</span> + 一下</span></td>
+            <td class="expl">«一下» tras el verbo indica que la acción es breve o ligera: «un momento, un poco».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你看一下。</span><span class="es-ex">Échale un vistazo.</span></li>
+              <li><span class="zh-ex">请等一下。</span><span class="es-ex">Espera un momento, por favor.</span></li>
+              <li><span class="zh-ex">我说一下。</span><span class="es-ex">Lo digo brevemente.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Verbos seguidos de «给»</td>
+            <td><span class="pat"><span class="var">Subj.</span> + <span class="var">Verb</span> + 给 + destinatario + <span class="var">Obj.</span></span></td>
+            <td class="expl">Algunos verbos llevan «给» después para indicar a quién se entrega o dirige algo.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">他送给我一本书。</span><span class="es-ex">Me regaló un libro.</span></li>
+              <li><span class="zh-ex">他卖给我两个苹果。</span><span class="es-ex">Me vendió dos manzanas.</span></li>
+              <li><span class="zh-ex">我送给妈妈一杯茶。</span><span class="es-ex">Le ofrecí a mamá una taza de té.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Verbos precedidos de «给»</td>
+            <td><span class="pat"><span class="var">Subj.</span> + 给 + destinatario + <span class="var">Verb</span> + <span class="var">Obj.</span></span></td>
+            <td class="expl">«给 + persona» antes del verbo indica para quién o a quién va dirigida la acción.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">现在不要给他打电话。</span><span class="es-ex">No lo llames ahora.</span></li>
+              <li><span class="zh-ex">我给你做饭。</span><span class="es-ex">Te cocino.</span></li>
+              <li><span class="zh-ex">妈妈给我买衣服。</span><span class="es-ex">Mamá me compra ropa.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Verbos con doble objeto</td>
+            <td><span class="pat"><span class="var">Subj.</span> + <span class="var">Verb</span> + Obj. indirecto + Obj. directo</span></td>
+            <td class="expl">Algunos verbos (问, 给, 教…) admiten dos objetos: primero la persona y luego la cosa.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我问了老师一个问题。</span><span class="es-ex">Le hice una pregunta al profesor.</span></li>
+              <li><span class="zh-ex">他给我一本书。</span><span class="es-ex">Me dio un libro.</span></li>
+              <li><span class="zh-ex">老师教我们汉语。</span><span class="es-ex">El profesor nos enseña chino.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 ============ -->
+  <section class="section" id="s2">
+    <div class="section-head">
+      <span class="num">2</span>
+      <h2>Estructuras gramaticales</h2>
+      <span class="zh">语法结构</span>
+    </div>
+    <p class="lead">Construcciones que combinan varias piezas para formar significados completos.</p>
+
+    <!-- 2.1 Complements -->
+    <div class="sub" id="compl">
+      <h3><span class="dot"></span>2.1 Complementos <span class="zh">补语</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Complemento de grado</td>
+            <td><span class="pat"><span class="var">Verb</span> + 得 + ……</span></td>
+            <td class="expl">«得» une el verbo con un complemento que valora cómo se hace la acción: «… de manera…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你做得不错。</span><span class="es-ex">Lo has hecho bastante bien.</span></li>
+              <li><span class="zh-ex">他说得很快。</span><span class="es-ex">Habla muy rápido.</span></li>
+              <li><span class="zh-ex">她唱得很好。</span><span class="es-ex">Canta muy bien.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Complemento potencial «不懂» (no comprender)</td>
+            <td><span class="pat"><span class="var">Verb</span> + 不懂</span></td>
+            <td class="expl">«不懂» tras 听 o 看 indica incapacidad de comprender: «no entender (lo que se oye o se lee)».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我听不懂。</span><span class="es-ex">No lo entiendo (al oírlo).</span></li>
+              <li><span class="zh-ex">这本书我看不懂。</span><span class="es-ex">No entiendo este libro.</span></li>
+              <li><span class="zh-ex">他说得太快，我听不懂。</span><span class="es-ex">Habla tan rápido que no lo entiendo.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Complementos de resultado</td>
+            <td><span class="pat"><span class="var">Verb</span> + 好 / 完 / 错</span></td>
+            <td class="expl">Un segundo elemento tras el verbo expresa el resultado de la acción: terminada (好/完), errónea (错), etc.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我们吃好了。</span><span class="es-ex">Ya hemos terminado de comer.</span></li>
+              <li><span class="zh-ex">你写错了。</span><span class="es-ex">Lo has escrito mal.</span></li>
+              <li><span class="zh-ex">工作做完了。</span><span class="es-ex">El trabajo está hecho.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Complementos «到» y «见»</td>
+            <td><span class="pat"><span class="var">Verb</span> + 到 / 见</span></td>
+            <td class="expl">«到» y «见» tras 看/听 indican que se logró percibir algo: «llegar a ver / oír».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">听到了吗？</span><span class="es-ex">¿Lo has oído?</span></li>
+              <li><span class="zh-ex">我看见他了。</span><span class="es-ex">Lo he visto.</span></li>
+              <li><span class="zh-ex">我没看到那个字。</span><span class="es-ex">No vi ese carácter.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Complemento «完» (terminar)</td>
+            <td><span class="pat"><span class="var">Verb</span> + 完 (+ 了)</span></td>
+            <td class="expl">«完» tras el verbo indica que la acción se ha completado del todo: «acabar de…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我说完了。</span><span class="es-ex">He terminado de hablar.</span></li>
+              <li><span class="zh-ex">饭吃完了。</span><span class="es-ex">Se acabó la comida.</span></li>
+              <li><span class="zh-ex">我看完了这本书。</span><span class="es-ex">He terminado de leer este libro.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 2.2 Numbers and Measure Words -->
+    <div class="sub" id="numw">
+      <h3><span class="dot"></span>2.2 Números y clasificadores <span class="zh">数词与量词</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">«Cada» con «每»</td>
+            <td><span class="pat">每 + <span class="var">MW</span> (+ <span class="var">Noun</span>)</span></td>
+            <td class="expl">«每» significa «cada / todos los…»; suele acompañarse de un clasificador.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">每个人。</span><span class="es-ex">Cada persona.</span></li>
+              <li><span class="zh-ex">每天。</span><span class="es-ex">Cada día.</span></li>
+              <li><span class="zh-ex">每个月。</span><span class="es-ex">Cada mes.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Clasificadores para contar</td>
+            <td><span class="pat"><span class="var">Number</span> + <span class="var">MW</span> + <span class="var">Noun</span></span></td>
+            <td class="expl">En chino, entre el número y el sustantivo se intercala un clasificador adecuado.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">一个人。</span><span class="es-ex">Una persona.</span></li>
+              <li><span class="zh-ex">一杯水。</span><span class="es-ex">Un vaso de agua.</span></li>
+              <li><span class="zh-ex">三本书。</span><span class="es-ex">Tres libros.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Clasificadores con «这» y «那»</td>
+            <td><span class="pat">这 / 那 + <span class="var">MW</span> (+ <span class="var">Noun</span>)</span></td>
+            <td class="expl">También se usa un clasificador tras «这» (este) y «那» (aquel).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">那个人。</span><span class="es-ex">Aquella persona.</span></li>
+              <li><span class="zh-ex">这杯水。</span><span class="es-ex">Este vaso de agua.</span></li>
+              <li><span class="zh-ex">这本书很好。</span><span class="es-ex">Este libro es muy bueno.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Números ordinales con «第»</td>
+            <td><span class="pat">第 + <span class="var">Number</span> (+ <span class="var">MW</span>)</span></td>
+            <td class="expl">«第» antepuesto a un número forma los ordinales: «primero, segundo…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你是我的第一个朋友。</span><span class="es-ex">Eres mi primer amigo.</span></li>
+              <li><span class="zh-ex">第二次</span><span class="es-ex">La segunda vez.</span></li>
+              <li><span class="zh-ex">这是我第三个孩子。</span><span class="es-ex">Este es mi tercer hijo.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 2.3 Question Forms -->
+    <div class="sub" id="quest">
+      <h3><span class="dot"></span>2.3 Formas de pregunta <span class="zh">疑问句</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Pregunta afirmativo-negativa</td>
+            <td><span class="pat"><span class="var">Verb</span> + 不 + <span class="var">Verb</span> / <span class="var">Adj.</span> + 不 + <span class="var">Adj.</span></span></td>
+            <td class="expl">Repetir el verbo o adjetivo en forma afirmativa y negativa forma una pregunta de sí/no, sin «吗».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">去不去？</span><span class="es-ex">¿Vas o no?</span></li>
+              <li><span class="zh-ex">好不好？</span><span class="es-ex">¿Vale?</span></li>
+              <li><span class="zh-ex">你忙不忙？</span><span class="es-ex">¿Estás ocupado?</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Preguntar el porqué con «怎么»</td>
+            <td><span class="pat">怎么……？</span></td>
+            <td class="expl">«怎么» pregunta por la causa o el modo, a menudo con sorpresa: «¿cómo es que…? / ¿por qué…?».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你怎么没来？</span><span class="es-ex">¿Cómo es que no viniste?</span></li>
+              <li><span class="zh-ex">你怎么了？</span><span class="es-ex">¿Qué te pasa?</span></li>
+              <li><span class="zh-ex">这个字怎么写？</span><span class="es-ex">¿Cómo se escribe este carácter?</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Preguntas retóricas simples</td>
+            <td><span class="pat">不是……吗？</span></td>
+            <td class="expl">«不是……吗？» plantea una pregunta retórica para confirmar algo evidente: «¿no es que…?».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">不是说好了吗？</span><span class="es-ex">¿No habíamos quedado?</span></li>
+              <li><span class="zh-ex">你不是很忙吗？</span><span class="es-ex">¿No estabas muy ocupado?</span></li>
+              <li><span class="zh-ex">这不是你的书吗？</span><span class="es-ex">¿No es este tu libro?</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Coletillas con «不»</td>
+            <td><span class="pat">……是不是 / 对不对 / 好不好 ?</span></td>
+            <td class="expl">Estas coletillas piden confirmación al final de la frase: «¿verdad? / ¿vale?».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你们明天来，好不好？</span><span class="es-ex">Venís mañana, ¿vale?</span></li>
+              <li><span class="zh-ex">他是老师，对不对？</span><span class="es-ex">Es profesor, ¿verdad?</span></li>
+              <li><span class="zh-ex">你是中国人，是不是？</span><span class="es-ex">Eres chino, ¿no?</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Coletillas con «吗»</td>
+            <td><span class="pat">……是吗 / 对吗 / 好吗 ?</span></td>
+            <td class="expl">Coletillas más suaves con «吗» para pedir confirmación: «¿verdad? / ¿no?».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">这样做，对吗？</span><span class="es-ex">Se hace así, ¿verdad?</span></li>
+              <li><span class="zh-ex">你是他的朋友，是吗？</span><span class="es-ex">Eres su amigo, ¿no?</span></li>
+              <li><span class="zh-ex">我们六点见，好吗？</span><span class="es-ex">Quedamos a las seis, ¿vale?</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 2.4 Sentence Patterns -->
+    <div class="sub" id="patt">
+      <h3><span class="dot"></span>2.4 Patrones de oraciones <span class="zh">句型</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Causa y efecto con «因为……所以……»</td>
+            <td><span class="pat">因为……，所以……</span></td>
+            <td class="expl">«因为» introduce la causa y «所以» la consecuencia: «como…, por eso…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">因为饿了，所以吃饭。</span><span class="es-ex">Como tenía hambre, comí.</span></li>
+              <li><span class="zh-ex">因为下雨，所以我没去。</span><span class="es-ex">Como llovía, no fui.</span></li>
+              <li><span class="zh-ex">因为很累，所以早点睡了。</span><span class="es-ex">Como estaba cansado, me acosté pronto.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«A punto de» con «快……了»</td>
+            <td><span class="pat">快 + <span class="var">Verb</span> / <span class="var">Adj.</span> + 了</span></td>
+            <td class="expl">«快……了» indica que algo está a punto de ocurrir: «pronto, ya casi».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">快下雨了。</span><span class="es-ex">Va a llover ya.</span></li>
+              <li><span class="zh-ex">快到了。</span><span class="es-ex">Ya casi llegamos.</span></li>
+              <li><span class="zh-ex">火车快开了。</span><span class="es-ex">El tren está a punto de salir.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Todo» con «什么都/也»</td>
+            <td><span class="pat">什么 + 都 / 也……</span></td>
+            <td class="expl">«什么 + 都/也» con sentido universal: «todo» (afirmativo) o «nada» (negativo).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">爸爸什么都知道。</span><span class="es-ex">Papá lo sabe todo.</span></li>
+              <li><span class="zh-ex">我什么都不想吃。</span><span class="es-ex">No quiero comer nada.</span></li>
+              <li><span class="zh-ex">他什么都喜欢。</span><span class="es-ex">Le gusta todo.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«Deja de…» con «别……了»</td>
+            <td><span class="pat">别 + <span class="var">Verb</span> + 了</span></td>
+            <td class="expl">«别……了» pide que se interrumpa una acción que ya está ocurriendo: «deja de…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">别玩了，快睡觉吧。</span><span class="es-ex">Deja de jugar, a dormir.</span></li>
+              <li><span class="zh-ex">别说了，我知道了。</span><span class="es-ex">Para ya, lo entiendo.</span></li>
+              <li><span class="zh-ex">别看手机了。</span><span class="es-ex">Deja el móvil.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">«是……的» para indicar el propósito</td>
+            <td><span class="pat">是……的</span></td>
+            <td class="expl">La estructura «是……的» resalta una circunstancia (cómo, cuándo, por qué, con qué fin) de una acción ya ocurrida.</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我是来上海旅游的。</span><span class="es-ex">Vine a Shanghái a hacer turismo.</span></li>
+              <li><span class="zh-ex">我是坐火车来的。</span><span class="es-ex">Vine en tren.</span></li>
+              <li><span class="zh-ex">他是昨天到的。</span><span class="es-ex">Llegó ayer.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Panorama de «是……的»</td>
+            <td><span class="pat">是……的</span></td>
+            <td class="expl">«是……的» enmarca y enfatiza información sobre una acción pasada (lugar, tiempo, modo).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">你是哪个学校的？</span><span class="es-ex">¿De qué escuela eres?</span></li>
+              <li><span class="zh-ex">这本书是我买的。</span><span class="es-ex">Este libro lo compré yo.</span></li>
+              <li><span class="zh-ex">他是从北京来的。</span><span class="es-ex">Vino de Pekín.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 2.4.1 Basic/Simple Sentence Patterns -->
+    <div class="sub nested" id="patt-basic">
+      <p class="sub-label">Subcategoría de 2.4 Patrones de oraciones</p>
+      <h3><span class="dot"></span>2.4.1 Patrones simples <span class="zh">基本句型</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">«Cada vez que» con «每次……都……»</td>
+            <td><span class="pat">每次 + evento1 + 都 + evento2</span></td>
+            <td class="expl">«每次……都……» expresa que algo ocurre siempre que se da otra circunstancia: «cada vez que…, …».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">为什么每次我来他都不在？</span><span class="es-ex">¿Por qué cada vez que vengo él no está?</span></li>
+              <li><span class="zh-ex">每次考试我都很累。</span><span class="es-ex">Cada vez que hay examen estoy agotado.</span></li>
+              <li><span class="zh-ex">他每次来都很高兴。</span><span class="es-ex">Cada vez que viene está contento.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 2.4.2 Comparison Patterns -->
+    <div class="sub nested" id="patt-comp">
+      <p class="sub-label">Subcategoría de 2.4 Patrones de oraciones</p>
+      <h3><span class="dot"></span>2.4.2 Patrones de comparación <span class="zh">比较句型</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">«Mucho más» en comparaciones con «……多了»</td>
+            <td><span class="pat">Nombre1 + 比 + Nombre2 + <span class="var">Adj.</span> + 多了</span></td>
+            <td class="expl">Añadir «多了» tras el adjetivo refuerza la diferencia: «mucho más… (que)».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">这本书比那本书贵多了。</span><span class="es-ex">Este libro es mucho más caro que aquel.</span></li>
+              <li><span class="zh-ex">今天比昨天热多了。</span><span class="es-ex">Hoy hace mucho más calor que ayer.</span></li>
+              <li><span class="zh-ex">他比我高多了。</span><span class="es-ex">Es mucho más alto que yo.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 2.4.3 Complex Sentence Patterns -->
+    <div class="sub nested" id="patt-cplx">
+      <p class="sub-label">Subcategoría de 2.4 Patrones de oraciones</p>
+      <h3><span class="dot"></span>2.4.3 Patrones complejos <span class="zh">复杂句型</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">«Aunque» con «虽然……，但是……»</td>
+            <td><span class="pat">虽然……，但是 / 可是……</span></td>
+            <td class="expl">«虽然» introduce una concesión y «但是/可是» el contraste: «aunque…, sin embargo…».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">虽然很累，但是我还想学习。</span><span class="es-ex">Aunque estoy cansado, todavía quiero estudiar.</span></li>
+              <li><span class="zh-ex">虽然下雨了，但是他还去了。</span><span class="es-ex">Aunque llovía, aun así fue.</span></li>
+              <li><span class="zh-ex">虽然很贵，可是我很喜欢。</span><span class="es-ex">Aunque es caro, me gusta mucho.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 ============ -->
+  <section class="section" id="s3">
+    <div class="section-head">
+      <span class="num">3</span>
+      <h2>Comparaciones de puntos similares</h2>
+      <span class="zh">相似语法对比</span>
+    </div>
+    <p class="lead">Puntos que suelen confundirse, presentados uno frente a otro para distinguirlos.</p>
+
+    <!-- 3.1 Auxiliary verbs -->
+    <div class="sub" id="cmp-aux">
+      <h3><span class="dot"></span>3.1 Verbos auxiliares <span class="zh">能愿动词对比</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Comparar «要» y «想»</td>
+            <td><span class="pat">要 vs 想</span></td>
+            <td class="expl">«要» expresa voluntad firme o necesidad («querer / ir a»); «想» es más suave: «desear, echar de menos, pensar».</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我要一杯水。</span><span class="es-ex">Quiero un vaso de agua (lo pido).</span></li>
+              <li><span class="zh-ex">我想你。</span><span class="es-ex">Te echo de menos.</span></li>
+              <li><span class="zh-ex">我想去中国。</span><span class="es-ex">Me gustaría ir a China.</span></li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td class="gp">Comparar «会», «能» y «可以»</td>
+            <td><span class="pat">会 vs 能 vs 可以</span></td>
+            <td class="expl">«会» = saber (habilidad aprendida); «能» = poder (capacidad o posibilidad); «可以» = poder (permiso).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">我会跳舞。</span><span class="es-ex">Sé bailar.</span></li>
+              <li><span class="zh-ex">这里不能跳舞。</span><span class="es-ex">Aquí no se puede bailar.</span></li>
+              <li><span class="zh-ex">我可以请你跳舞吗？</span><span class="es-ex">¿Puedo invitarte a bailar?</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- 3.2 Numbers -->
+    <div class="sub" id="cmp-num">
+      <h3><span class="dot"></span>3.2 Números <span class="zh">数词对比</span></h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Punto gramatical</th><th>Patrón</th><th>Explicación</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="gp">Comparar «二» y «两»</td>
+            <td><span class="pat">二 vs 两</span></td>
+            <td class="expl">«二» se usa para contar y en los números; «两» se usa con clasificadores (dos unidades de algo).</td>
+            <td><ul class="ex">
+              <li><span class="zh-ex">两个人。</span><span class="es-ex">Dos personas.</span></li>
+              <li><span class="zh-ex">二十二。</span><span class="es-ex">Veintidós.</span></li>
+              <li><span class="zh-ex">两本书。</span><span class="es-ex">Dos libros.</span></li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="stamp-sm">完</div>
+    <p>Guía de repaso de gramática · <strong>HSK 2 (汉语水平考试二级)</strong> · Material para clase de chino · Ejemplos con vocabulario HSK 1–2.</p>
+  </footer>
+
+</div>
+
+<script src="nav-loader.js"></script>
+</body>
+</html>
