@@ -17,12 +17,21 @@
   "use strict";
 
   /* ------------------------------------------------------------------ */
+  /* 0. Cargar Noto Serif (latin) para los diacríticos del 3er tono.    */
+  /*    Spectral italic no incluye glifos para ǎ ě ǐ ǒ ǔ; Noto sí.      */
+  /* ------------------------------------------------------------------ */
+  var fontLink = document.createElement("link");
+  fontLink.rel = "stylesheet";
+  fontLink.href = "https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;1,400&display=swap";
+  document.head.appendChild(fontLink);
+
+  /* ------------------------------------------------------------------ */
   /* 1. Estilos inyectados (un solo bloque, así no toca el CSS existente) */
   /* ------------------------------------------------------------------ */
   var css = ''
     + '.py-ex{'
     +   'display:none;'  /* oculto por defecto */
-    +   'font-family:"Spectral",Georgia,serif;'
+    +   'font-family:"Noto Serif","Spectral",Georgia,serif;'
     +   'font-style:italic;'
     +   'font-size:.82rem;'
     +   'color:var(--gold,#A6792F);'
@@ -133,6 +142,9 @@
       }
       var texto = ejemplos[i].textContent;
       var py = pinyin(texto, { toneType: "symbol", nonZh: "consecutive" });
+      // Normalizar a forma precompuesta (NFC): garantiza que ǎ ě ǐ ǒ ǔ sean
+      // una sola unidad Unicode y no "a" + caron por separado.
+      if (typeof py.normalize === "function") py = py.normalize("NFC");
       var span = document.createElement("span");
       span.className = "py-ex";
       span.textContent = py;
